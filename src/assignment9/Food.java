@@ -12,15 +12,28 @@ public class Food {
 	/**
 	 * Creates a new Food at a random location
 	 */
+	
 	public Food() {
 		//FIXME
+		x = Math.random()*(1-FOOD_SIZE)+FOOD_SIZE/2;
+		y = Math.random()*(1-FOOD_SIZE)+FOOD_SIZE/2;
 	}
 	
 	/**
 	 * Draws the Food
 	 */
 	public void draw() {
+		StdDraw.setPenColor(Color.RED);
+		StdDraw.filledCircle(x, y, FOOD_SIZE/2);
 		//FIXME
+	}
+	
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
 	}
 	
 }
